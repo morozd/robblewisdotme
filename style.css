@@ -284,6 +284,13 @@ nav.main {
     float: left;
 }
 
+.project    {
+    border: 1px solid #DDD8C9;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #E9E4D6;
+}
+
 .social ul     {
     list-style-type: none;
     margin-left: -20px;
