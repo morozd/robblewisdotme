@@ -1,11 +1,7 @@
 <?php
 
-function wcount(){
- ob_start();
- the_content();
- $content = ob_get_clean();
- return sizeof(explode(" ", $content));
-}
+	
+add_post_type_support('page', 'excerpt');
 
 register_sidebars( 1,
 array(
