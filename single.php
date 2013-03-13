@@ -14,6 +14,25 @@
         echo (" <a href='/category/".$category[0]->cat_name."'>".$category[0]->cat_name."</a>");
         ?></a>. The permalink is <a href="<?php the_permalink();?>"><?php the_permalink();?></a>.</p>
 
+        <p><a href="#" class="focus">Focus</a></p>
+
+        <script>
+    $(".focus").click(function () {
+      $("header").slideToggle("slow");
+      $("nav").slideToggle("slow");
+      $(".meta").slideToggle("slow");
+      $("footer").slideToggle("slow");
+      if($(this).text() == 'Focus')
+       {
+           $(this).text('Unfocus');
+       }
+       else
+       {
+           $(this).text('Focus');
+       }
+    });
+</script>
+
                 <p><?php the_content('Read more &raquo;'); ?></p>
 
                 <p class="meta">This weblog has no comments. If you want to discuss this post or anything else contact me <a href   ="http://twitter.com/rmlewisuk">on Twitter (@rmlewisuk)</a> or <a href="/contact">email me</a>.</p>
