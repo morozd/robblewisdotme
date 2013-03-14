@@ -13,17 +13,23 @@
 
         <script>
     $(".focus").click(function () {
-      $("header").slideToggle("slow");
-      $("nav").slideToggle("slow");
-      $(".meta").slideToggle("slow");
-      $("footer").slideToggle("slow");
       if($(this).text() == 'Focus')
        {
-           $(this).text('Unfocus');
+          $("header").slideToggle("slow");
+        $("nav").slideToggle("slow");
+        $(".meta").slideToggle("slow");
+        $("footer").slideToggle("slow");
+          $("img").animate({"opacity":"0.3"}, 550);
+          $(this).text('Unfocus');
        }
        else
        {
-           $(this).text('Focus');
+          $("header").slideToggle("slow");
+      $("nav").slideToggle("slow");
+      $(".meta").slideToggle("slow");
+      $("footer").slideToggle("slow");
+          $("img").animate({"opacity":"1"}, 550);
+          $(this).text('Focus');
        }
     });
 </script>
