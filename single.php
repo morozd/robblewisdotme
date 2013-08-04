@@ -2,7 +2,6 @@
 
 <section class="basket-whole posts">
 
-    <!-- NEW -->
     <?php if (have_posts()) : ?>  
     <?php while (have_posts()) : the_post(); ?>
 
@@ -13,11 +12,11 @@
     
                 <p><?php the_content('Read more &raquo;'); ?></p>
 
+                <p class="meta">This weblog has no comments. If you want to discuss this post or anything else contact me <a href="http://twitter.com/rmlewisuk">on Twitter (@rmlewisuk)</a> or <a href="/contact">email me</a>.</p>
+
             </article>
 
     <?php endwhile; ?>
-
-    <!-- NEW -->
 
     <nav class="basket-whole">
 
