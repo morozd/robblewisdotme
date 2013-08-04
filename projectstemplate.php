@@ -12,7 +12,7 @@
          		<h2><?php the_title();?></h2>
 
                 <ul>
-                      <li><a href="http://github.com/rmlewisuk">GitHub &raquo;</a>
+                      <li><a href="http://github.com/rmlewisuk?tab=repositories">GitHub &raquo;</a>
                         <p>Most of my development projects are found here.</p></li>
 
                 <!--Start of child pages-->
