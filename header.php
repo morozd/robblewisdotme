@@ -16,31 +16,35 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-		<script type="text/javascript">
-
- 			 var _gaq = _gaq || [];
- 			 _gaq.push(['_setAccount', 'UA-13281881-12']);
- 			 _gaq.push(['_trackPageview']);
-			
- 			 (function() {
- 			   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- 			   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- 			   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- 			 })();
-
-		</script>
+				<script type="text/javascript">
+  					var GoSquared = {};
+  					GoSquared.acct = "GSN-829474-I";
+  					(function(w){
+  					  function gs(){
+  					    w._gstc_lt = +new Date;
+  					    var d = document, g = d.createElement("script");
+  					    g.type = "text/javascript";
+  					    g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+  					    var s = d.getElementsByTagName("script")[0];
+  					    s.parentNode.insertBefore(g, s);
+  					  }
+  					  w.addEventListener ?
+  					    w.addEventListener("load", gs, false) :
+  					    w.attachEvent("onload", gs);
+  					})(window);
+				</script>
 		
 	</head>
 	
 	<body class="basket">
 		
-		<header class="basket-quarter">
+		<header class="basket-whole title">
 
 			<h1><a href="/"><?php bloginfo('name'); ?></a></h1>
 
 		</header>
 
-		<nav class="basket-threeq main">
+		<nav class="basket-whole main">
 
 			<ul>
 				<?php wp_list_pages('title_li=&depth=1'); ?>

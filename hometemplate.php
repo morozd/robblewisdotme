@@ -4,18 +4,7 @@
 
         <section class="basket-whole photo">
 
-            <section class="basket-half list">
-
-                <p> <span class="icon">j</span> DEVELOPER<br/>
-                    <span class="icon">*</span> BLOGGER<br/>
-                    <span class="icon">{</span> STUDENT</P>
-            </section>
-
-            <section class="basket-half credit">
-
-                <p><small>Photo by <a href="http://www.starboardmediauk.co.uk/">Starboard Media</a></small></p>
-
-            </section>
+            <img src="<?php bloginfo('template_directory'); ?>/img/photobg.jpg">
 
         </section>
 
@@ -30,34 +19,34 @@
     
     <?php endwhile; ?> 
 
-        <section class="basket-half posts">
+        <section class="basket-sixty posts home-widget">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home-Left') ) : ?>
             <?php endif; ?> 
         </section>
 
-        <section class="basket-quarter git">
+        <section class="basket-forty git home-widget">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home-Center') ) : ?>
             <?php endif; ?>
 
             <!-- Javascript to load and display repos from GitHub -->
-                <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-                <script src="<?php bloginfo('template_directory'); ?>/scripts/git.js" type="text/javascript"></script>
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 <script type="text/javascript">
-                $(function() {
-                  $("#gitrepos").loadRepositories("rmlewisuk");
+                var repo, i;
+
+                $.ajax({
+                  url: "https://api.github.com/users/rmlewisuk/repos?sort=pushed",
+                  success: function(data){
+                    for ( i=0; i < 5; i++) {
+                        $('#gitrepos').append("<li><a href='http://github.com/rmlewisuk/" + data[i].name+ "'>" + data[i].name + "</a></li>");
+                    }
+                  }
                 });
-                </script>
             <!-- End GitHub repo code -->
-            <h3><span class='icon'>j</span> Repositories</h3>
+            </script>
+            <h3><span class='icon'>j</span> Recently Pushed</h3>
 
-            <span id="gitrepos"></span>
+            <span><ul id="gitrepos"></ul></span>
 
-        </section>
-
-        <section class="basket-quarter social">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home-Right') ) : ?>
-            <?php endif; ?>
-            
         </section>
     
     <?php else : ?>  

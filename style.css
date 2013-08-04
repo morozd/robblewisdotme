@@ -45,7 +45,7 @@ html {
 }
 
 body {
-    background: #F0EDE3;
+    background: #F8F8F8;
     font: 16px/24px "Lato", "Helvetica Neue", Arial, sans-serif;
     color: #666;
 }
@@ -99,7 +99,7 @@ pre     {
 -------------------------------------------------------------- */
 
 .basket {
-    max-width: 960px;
+    max-width: 850px;
     margin: auto;
     padding-bottom: 20px;
 }
@@ -122,8 +122,9 @@ pre     {
 -------------------------------------------------------------- */
 
 .basket-whole     { width: 100%;   }
+.basket-sixty     { width: 60%;    }
 .basket-half      { width: 50%;    }
-.basket-forty   {width: 40%;}
+.basket-forty     { width: 40%;    }
 .basket-threeq    { width: 75%;    }
 .basket-third     { width: 33.33%; }
 .basket-quarter   { width: 25%;    }
@@ -205,12 +206,20 @@ ul, ol  {
     margin: 10px 0 10px 0;
 }
 
+header h1 {
+    text-align: center;
+}
+
 nav.main {
     margin-top: 12px;
     font-size: 1em;
     text-transform: uppercase;
+    text-align: center;
 }
 
+    nav ul {
+        margin-left: -38px;
+    }
 
     nav ul li   {
         display: inline;
@@ -224,8 +233,7 @@ nav.main {
     }
 
     nav ul li.current_page_item a, nav ul li.current_page_parent a{
-        border-bottom: 1px dotted #F56559;
-        border-top: 1px dotted #F56559;
+        border-bottom: 1px solid #F56559;
     }
 
     .current_page_parent:hover, .current_page_item:hover    {
@@ -233,40 +241,19 @@ nav.main {
     }
 
     nav ul li a:hover     {
-        border-bottom: 1px dotted #F56559;
-        border-top: 1px dotted #F56559;
+        border-bottom: 1px solid #F56559;
     }
 
     nav ul li a:hover   {
         text-decoration: none;
     }
 
-.photo  {
-    background: url('img/photobg.jpg') no-repeat;
-    height: 310px;
-    margin-top: 20px;
-    border: 2px solid #666;
+.photo {
+    text-align: center;
 }
 
-    .photo .list    {
-        color: #C9C7C7;
-        font-weight: bold;
-        font-size: 2em;
-        line-height: 2.5em;
-    }
-
-    .credit {
-        text-align: right;
-    }
-
-    @media only screen and (max-width: 480px) {
-        .photo  {
-            background: url('img/photobg480.jpg') no-repeat;
-        }
-
-        .meta.list {
-            display: none;
-        }
+    .photo img {
+        max-width: 90%;
     }
 
 .meta   {
@@ -318,5 +305,5 @@ footer  {
     color: #A7A7A7;
     text-align: center;
     margin-top: 20px;
-    border-top: 1px dotted #aaa;
+    border-top: 1px solid #aaa;
 }
