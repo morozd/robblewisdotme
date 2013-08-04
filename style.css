@@ -162,7 +162,7 @@ h1 {
 
 h2 {
     font-size: 1.6em; /* 20px */
-    line-height: 2.5em; /* 22px */
+    line-height: 1.5em; /* 22px */
 }
 
 h3 {
@@ -256,14 +256,18 @@ nav.main {
         max-width: 90%;
     }
 
+article {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+    article:last-of-type {
+        border: 0;
+    }
+
 .meta   {
     color: #A8A8A8;
     font-size: 80%;
 }
-
-    .meta p:first-child     {
-        padding-top: 65px;
-    }
 
 a.focus {
     padding: 5px 15px;
@@ -296,14 +300,9 @@ a.focus:hover   {
     background-color: #E9E4D6;
 }
 
-.social ul     {
-    list-style-type: none;
-    margin-left: -20px;
-}
-
 footer  {
     color: #A7A7A7;
     text-align: center;
     margin-top: 20px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #D8D8D8;
 }
