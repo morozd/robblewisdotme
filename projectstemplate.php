@@ -11,7 +11,9 @@
 
          		<h2><?php the_title();?></h2>
 
-                <p><?php the_content('Read more &raquo;'); ?></p>
+                <ul>
+                      <li><a href="http://github.com/rmlewisuk">GitHub &raquo;</a>
+                        <p>Most of my development projects are found here.</p></li>
 
                 <!--Start of child pages-->
 
@@ -31,39 +33,18 @@
                      foreach($subpages as $post) :
                         setup_postdata($post);
                      ?>
-
-                    <article class="project" id="<?php the_title();?>">
-
-                    <h3><a href="<?php the_permalink(); ?>"id="post-<?php the_ID(); ?>"><?php the_title(); ?> &raquo;</a></h3>
-                    <p><?php the_excerpt(); ?></p>
-                   </article>
+                      <li><a href="<?php the_permalink(); ?>"id="post-<?php the_ID(); ?>"><?php the_title(); ?> &raquo;</a>
+                        <?php the_excerpt(); ?></li>
                     
                   <?php endforeach; ?>
+
+                  </ul>
 
                   <!--End of child pages-->
 
             </article>
     
     <?php endwhile; ?> 
-
-    <article class="project">
-    <h3><a href="https://github.com/rmlewisuk?tab=repositories">GitHub Repositories &raquo;</a></h3>
-
-                <!-- Javascript to load and display repos from GitHub -->
-                <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
-                <script src="<?php bloginfo('template_directory'); ?>/scripts/gitfull.js" type="text/javascript"></script>
-                <script type="text/javascript">
-                    $(function() {
-                      $("#gitrepos").loadRepositories("rmlewisuk");
-                    });
-                </script>
-                <!-- End GitHub repo code -->
-
-            <ul>
-            <span id="gitrepos"></span>
-            </ul>
-
-          </article>
 
     </section>
     
