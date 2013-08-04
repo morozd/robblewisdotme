@@ -2,50 +2,22 @@
 
 <section class="basket-whole posts">
 
-    <article>
-
+    <!-- NEW -->
     <?php if (have_posts()) : ?>  
     <?php while (have_posts()) : the_post(); ?>
 
-                <h2><?php the_title();?></h2>
+            <article class="basket-whole main">
 
-                <p class="meta"><span class="icon">*</span> This article was posted on <?php the_date('jS F');?> and filed under <?php
-        $category = get_the_category(); 
-        echo (" <a href='/category/".$category[0]->cat_name."'>".$category[0]->cat_name."</a>");
-        ?></a>. The permalink is <a href="<?php the_permalink();?>"><?php the_permalink();?></a>.</p>
-
-        <p><a href="#" class="focus">Focus</a></p>
-
-        <script>
-    $(".focus").click(function () {
-      if($(this).text() == 'Focus')
-       {
-          $("header").slideToggle("slow");
-        $("nav").slideToggle("slow");
-        $(".meta").slideToggle("slow");
-        $("footer").slideToggle("slow");
-          $("img").animate({"opacity":"0.3"}, 550);
-          $(this).text('Unfocus');
-       }
-       else
-       {
-          $("header").slideToggle("slow");
-      $("nav").slideToggle("slow");
-      $(".meta").slideToggle("slow");
-      $("footer").slideToggle("slow");
-          $("img").animate({"opacity":"1"}, 550);
-          $(this).text('Focus');
-       }
-    });
-</script>
-
+                <h2 class="title"><?php the_title();?></h2>
+                <p class="meta"><span class="icon">*</span> <?php echo get_the_date('l jS F'); ?>
+    
                 <p><?php the_content('Read more &raquo;'); ?></p>
 
-                <p class="meta">This weblog has no comments. If you want to discuss this post or anything else contact me <a href   ="http://twitter.com/rmlewisuk">on Twitter (@rmlewisuk)</a> or <a href="/contact">email me</a>.</p>
-
             </article>
-    
-    <?php endwhile; ?> 
+
+    <?php endwhile; ?>
+
+    <!-- NEW -->
 
     <nav class="basket-whole">
 

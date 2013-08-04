@@ -46,7 +46,7 @@ html {
 
 body {
     background: #F8F8F8;
-    font: 16px/24px "Lato", "Helvetica Neue", Arial, sans-serif;
+    font: 16px/29px "Lato", "Helvetica Neue", Arial, sans-serif;
     color: #666;
 }
 
@@ -114,7 +114,7 @@ pre     {
 [class*='basket-'] {
     float: left;
     display: inline-block;
-    padding: 10px 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
 /* --------------------------------------------------------------
@@ -211,7 +211,6 @@ header h1 {
 }
 
 nav.main {
-    margin-top: 12px;
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
@@ -258,7 +257,12 @@ nav.main {
 
 article {
     border-bottom: 1px solid #D8D8D8;
+    margin-top: 20px;
 }
+
+    article:first-of-type {
+        margin-top: 0;
+    }
 
     article:last-of-type {
         border: 0;
@@ -269,7 +273,11 @@ article {
     font-size: 80%;
 }
 
-a.focus {
+    .meta a {
+        color: inherit;
+    }
+
+/*a.focus {
     padding: 5px 15px;
     text-transform: uppercase;
     font-size: 90%;
@@ -281,7 +289,8 @@ a.focus {
 a.focus:hover   {
     background: #F86555;
     text-decoration: none;
-}
+}*/
+
 
 .next   {
     text-align: right;

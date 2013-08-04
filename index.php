@@ -8,7 +8,7 @@
             <article class="basket-whole main">
 
                 <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-                <p class="meta"><?php echo get_the_date('l jS F'); ?></p>
+                <p class="meta"><span class="icon">*</span> <?php echo get_the_date('l jS F'); ?> | <a href="<?php the_permalink();?>">Permalink</a></p>
     
                 <p><?php the_content('Read more &raquo;'); ?></p>
 
