@@ -137,7 +137,8 @@ pre     {
     .basket-third,
     .basket-quarter,
     .basket-fifth,
-    .basket-forty { width: 100%;   }
+    .basket-forty,
+    .basket-sixty { width: 100%;   }
 }
 
 /* --------------------------------------------------------------
