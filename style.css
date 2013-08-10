@@ -257,7 +257,7 @@ nav.main {
     }
 
     .featured {
-        padding-bottom: 15px;
+        margin-bottom: 30px;
         width: auto;
         max-height: 272px;
         overflow: hidden;
