@@ -256,6 +256,13 @@ nav.main {
         max-width: 90%;
     }
 
+    .featured {
+        padding-bottom: 15px;
+        width: auto;
+        max-height: 272px;
+        overflow: hidden;
+    }
+
 article {
     border-bottom: 1px solid #D8D8D8;
     margin-top: 20px;

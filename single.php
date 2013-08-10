@@ -9,6 +9,16 @@
 
                 <h2 class="title"><?php the_title();?></h2>
                 <p class="meta"><span class="icon">*</span> <?php echo get_the_date('l jS F'); ?>
+
+                <?php // Featured blog post image
+
+                    $f_image = post_custom('f_image');
+
+                    if ($f_image) : ?>
+                        <section class="basket-whole photo featured">
+                            <img src="<?php echo $f_image; ?>">
+                        </section>
+                    <?php endif; ?>
     
                 <p><?php the_content('Read more &raquo;'); ?></p>
 
