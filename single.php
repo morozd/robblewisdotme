@@ -1,5 +1,7 @@
 <?php get_header();?>
 
+<?php $category = get_the_category(); ?>
+
 <section class="basket-whole posts">
 
     <?php if (have_posts()) : ?>  
@@ -9,6 +11,7 @@
 
                 <h2 class="title"><?php the_title();?></h2>
                 <p class="meta"><span class="icon">*</span> <?php echo get_the_date('l jS F'); ?>
+                    | <a href="/category/<?php echo $category[0]->name;?>"><?php echo $category[0]->name; ?></a></p>
 
                 <?php // Featured blog post image
 
