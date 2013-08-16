@@ -39,6 +39,11 @@
 					var success = function() {
 						console.log("Done");
 						$('p').attr('class', 'rainbow');
+						$('a').attr('class', 'rainbow');
+						$('ul').attr('class', 'rainbow');
+						$('ol').attr('class', 'rainbow');
+						$('li').attr('class', 'rainbow');
+						$('code').attr('class', 'rainbow');
 					}
 
 					konami = new Konami(success);
