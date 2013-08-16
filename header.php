@@ -33,6 +33,16 @@
   					    w.attachEvent("onload", gs);
   					})(window);
 				</script>
+
+				<script type="text/javascript" src="http://snaptortoise.github.io/konami-js/konami.js"></script>
+				<script type="text/javascript">
+					var success = function() {
+						console.log("Done");
+						$('p').attr('class', 'rainbow');
+					}
+
+					konami = new Konami(success);
+				</script>
 		
 	</head>
 	
