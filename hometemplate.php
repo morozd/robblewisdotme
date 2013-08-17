@@ -19,35 +19,42 @@
     
     <?php endwhile; ?> 
 
-        <section class="basket-sixty posts home-widget">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home-Left') ) : ?>
-            <?php endif; ?> 
-        </section>
+    <section class="basket-whole latest post">
+        <!-- Get latest post excluding links -->
+        <?php
+            $args = array( 'numberposts' => '1' , 'category' => -726,);
+            $recent_posts = wp_get_recent_posts( $args );
+            // print_r($recent_posts);
+            foreach( $recent_posts as $recent ){
+                echo '<h3><span class="icon">*</span> Latest post &raquo; <a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </h3> ';
+                echo '<blockquote>' . esc_attr($recent["post_excerpt"]) . '</blockquote>';
+            }
+        ?>
+    </section>
 
-        <section class="basket-forty git home-widget">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home-Center') ) : ?>
-            <?php endif; ?>
+    <section class="basket-whole latest repo">
+        <!-- Get latest GitHub push -->
+        <script type="text/javascript">
+            var repo, i;
 
-            <!-- Javascript to load and display repos from GitHub -->
-                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-                <script type="text/javascript">
-                var repo, i;
+            $.ajax({
+                url: "https://api.github.com/users/rmlewisuk/repos?sort=pushed",
+                success: function(data){
+                    $('#latest-push').append("<a href='http://github.com/rmlewisuk/" + data[0].name+ "'>" + data[0].name + "</a>");
+                    $('#repo-description').append(data[0].description);
+                }
+            });
+        </script>
 
-                $.ajax({
-                  url: "https://api.github.com/users/rmlewisuk/repos?sort=pushed",
-                  success: function(data){
-                    for ( i=0; i < 5; i++) {
-                        $('#gitrepos').append("<li><a href='http://github.com/rmlewisuk/" + data[i].name+ "'>" + data[i].name + "</a></li>");
-                    }
-                  }
-                });
-            <!-- End GitHub repo code -->
-            </script>
-            <h3><span class='icon'>j</span> Recently Pushed</h3>
+        <h3 id="latest-push"><span class="icon">j</span> Recently pushed &raquo; </h3>
+        <blockquote id="repo-description"></blockquote>
+        
+    </section>
 
-            <span><ul id="gitrepos"></ul></span>
-
-        </section>
+    <section class="basket-whole latest tweet">
+        <h3><span class="icon">_</span> Latest Tweet &raquo; <a href="http://twitter.com/rmlewisuk">@rmlewisuk</a></h3>
+        <blockquote><?php get_tweet(); ?></blockquote>
+    </section>
     
     <?php else : ?>  
     //Something that happens when a post isn’t found.
