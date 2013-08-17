@@ -325,6 +325,14 @@ a.focus:hover   {
     text-decoration: none;
 }*/
 
+.next, .previous {
+    text-transform: uppercase;
+    font-size: 70%;
+}
+
+    .next a, .previous a {
+        color: #a8a8a8;
+    }
 
 .next   {
     text-align: right;
