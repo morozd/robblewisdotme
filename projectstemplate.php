@@ -11,34 +11,37 @@
 
          		<h2><?php the_title();?></h2>
 
-                <ul>
-                      <li><a href="http://github.com/rmlewisuk?tab=repositories">GitHub &raquo;</a>
-                        <p>Most of my development projects are found here.</p></li>
+            <?php the_content(); ?>
+
+                <dl>
+                      <dt><a href="http://github.com/rmlewisuk?tab=repositories">GitHub</a></dt>
+                        <dd>Most of my development projects can be found here.</dd>
 
                 <!--Start of child pages-->
 
                 <?php
                     // Set up the arguments for retrieving the pages
                     $args = array(
-                        'post_type' => 'page',
-                        'numberposts' => -1,
-                        'post_status' => null,
-                    // $post->ID gets the ID of the current page
-                    'post_parent' => $post->ID,
-                        'order' => ASC,
-                        'orderby' => menu_order
-                        );
-                     $subpages = get_posts($args);
-                     // Just another WordPress Loop
-                     foreach($subpages as $post) :
-                        setup_postdata($post);
-                     ?>
-                      <li><a href="<?php the_permalink(); ?>"id="post-<?php the_ID(); ?>"><?php the_title(); ?> &raquo;</a>
-                        <?php the_excerpt(); ?></li>
-                    
-                  <?php endforeach; ?>
+                      'post_type' => 'page',
+                      'numberposts' => -1,
+                      'post_status' => null,
+                      // $post->ID gets the ID of the current page
+                      'post_parent' => $post->ID,
+                      'order' => ASC,
+                      'orderby' => menu_order
+                    );
+                    $subpages = get_posts($args);
 
-                  </ul>
+                    foreach($subpages as $post) :
+                       setup_postdata($post);
+                    ?>
+
+                    <dt><a href="<?php the_permalink(); ?>"id="post-<?php the_ID(); ?>"><?php the_title(); ?></a></dt>
+                    <dd><?php the_excerpt(); ?></dd>
+                    
+                    <?php endforeach; ?>
+
+                  </dl>
 
                   <!--End of child pages-->
 
