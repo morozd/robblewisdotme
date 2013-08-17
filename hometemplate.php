@@ -22,7 +22,7 @@
     <section class="basket-whole latest post">
         <!-- Get latest post excluding links -->
         <?php
-            $args = array( 'numberposts' => '1' , 'category' => -726,);
+            $args = array( 'numberposts' => '1' , 'category' => -726, 'post_status' => 'publish');
             $recent_posts = wp_get_recent_posts( $args );
             // print_r($recent_posts);
             foreach( $recent_posts as $recent ){
