@@ -11,7 +11,8 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico">
+		<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/img/apple-touch-icon.png"/>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css" />
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
