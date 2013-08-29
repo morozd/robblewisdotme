@@ -6,6 +6,7 @@
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta description="Robb Lewis developer in Portsmouth, UK. Blogs about technology, development and the web.">
 		
 		
 		<!--[if lt IE 9]>

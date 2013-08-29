@@ -9,6 +9,7 @@
 
                 <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
                 <p class="meta"><span class="icon">*</span> <?php echo get_the_date('l jS F'); ?> | <a href="<?php the_permalink();?>">Permalink</a></p>
+                <section class="featured">
                 <?php // Featured blog post image
 
                     $f_image = post_custom('f_image');
@@ -18,6 +19,7 @@
                             <img src="<?php echo $f_image; ?>">
                         </section>
                     <?php endif; ?>
+                </section>
                 <p><?php the_content('Read more &raquo;'); ?></p>
 
             </article>
